@@ -10,8 +10,12 @@ export const Card = styled.div`
   }
 `;
 
-const StyledButton = styled.button`
-  background: ${props => props.isPressed ? '#4CAF50' : '#f0f0f0'}; // Зелёный при нажатии, серый — нет
+interface StyledButtonProps {
+  isPressed: boolean;
+}
+
+export const StyledButton = styled.button<StyledButtonProps>`
+  background: ${props => props.isPressed ? '#4CAF50' : '#f0f0f0'};
   color: ${props => props.isPressed ? 'white' : 'black'};
   border: none;
   padding: 8px 16px;
@@ -23,7 +27,6 @@ const StyledButton = styled.button`
     opacity: 0.9;
   }
 `;
-
 export const FlexBoxRow = styled.div`
   display: flex;
   flex-direction: row;
