@@ -10,9 +10,24 @@ export const Card = styled.div`
   }
 `;
 
+const StyledButton = styled.button`
+  background: ${props => props.isPressed ? '#4CAF50' : '#f0f0f0'}; // Зелёный при нажатии, серый — нет
+  color: ${props => props.isPressed ? 'white' : 'black'};
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
 export const FlexBoxRow = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between
   gap: 10px;
   align-items: center;
 `;
