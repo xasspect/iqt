@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from 'react';
+import { StyledButton } from './components/styled/styled.tsx';
 
 export const Card = styled.div`
   padding: 18px 20px;
@@ -27,6 +29,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
     opacity: 0.9;
   }
 `;
+
 export const FlexBoxRow = styled.div`
   display: flex;
   flex-direction: row;
