@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { useState } from 'react';
-import { StyledButton } from './components/styled/styled.tsx';
 
 export const Card = styled.div`
   padding: 18px 20px;
@@ -9,24 +7,6 @@ export const Card = styled.div`
 
   @media (prefers-color-scheme: dark) {
     background-color: #111;
-  }
-`;
-
-interface StyledButtonProps {
-  isPressed: boolean;
-}
-
-export const StyledButton = styled.button<StyledButtonProps>`
-  background: ${props => props.isPressed ? '#4CAF50' : '#f0f0f0'};
-  color: ${props => props.isPressed ? 'white' : 'black'};
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s;
-
-  &:hover {
-    opacity: 0.9;
   }
 `;
 
