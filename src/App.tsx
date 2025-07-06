@@ -35,12 +35,13 @@ function App() {
         <FlexBoxCol>
           <FlexBoxRow>
             <TonConnectButton />
-            <StyledButton
-              isPressed={isPressed}
-              onClick={() => setIsPressed(!isPressed)}
-            >
-              button
-            </StyledButton>
+            <Button>
+              {network
+                ? network === CHAIN.MAINNET
+                  ? "mainnet"
+                  : "testnet"
+                : "N/A"}
+            </Button>
           </FlexBoxRow>
           <Counter />
           <TransferTon />
